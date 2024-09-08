@@ -132,10 +132,11 @@ const App = () => {
       <div>
         <h2>Log in to application</h2>
         <Notification notification={notification}/>
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} data-testid="loginForm">
           <div>
           username
             <input
+            data-testid="username"
               type="text"
               value={username}
               name="Username"
@@ -145,6 +146,7 @@ const App = () => {
           <div>
           password
             <input
+              data-testid="password"
               type="password"
               value={password}
               name="Password"

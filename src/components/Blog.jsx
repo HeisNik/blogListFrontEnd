@@ -41,8 +41,8 @@ const Blog = ({ blog, handleBlogLikes, user, deleteBlog }) => {
     )}
 
   return (
-    <div style={blogStyle}>
-      <div className='titleAndAuthor'><b>{blog.title}</b> {blog.author} <button onClick={openBlog}>hide</button></div>
+    <div style={blogStyle} data-testid="openBlog" className="openBlog">
+      <div className='titleAndAuthor' data-testid='titleAndAuthor'><b>{blog.title}</b> {blog.author} <button onClick={openBlog}>hide</button></div>
       <div className='url'>{blog.url}</div>
       <div className='likes'>likes {blog.likes} <button onClick={() => handleLikes(blog)} id='likeButton'>like</button></div>
       <div className='blogUser'>{blog.user.username}</div>
